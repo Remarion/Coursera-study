@@ -72,9 +72,9 @@ $ajaxUtils.sendGetRequest(
  function buildAndShowHomeHTML (categories) {
 	  $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
-    function (homeHtml) {}
-		  },// ***** <---- TODO: STEP 1: Substitute [...] ******
-  true); // Explicitely setting the flag to get JSON from server processed into an object literal
+    function (homeHtml) {document.querySelector("#main-content").innerHTML=homeHTML}
+		  },
+  true); 
 });
 // *** finish **
 
