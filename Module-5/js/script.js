@@ -61,20 +61,16 @@ var switchMenuToActive = function () {
 };
 
 // On page load (before images or CSS)
-document.addEventListener("DOMContentLoaded", function (event) {
-// TODO: STEP 1: Substitute [...] below with the *value* of the function buildAndShowHomeHTML,
-// so it can be called when server responds with the categories data.
-
-// On first load, show home view
+document.addEventListener("DOMContentLoaded", 
+function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
  function buildAndShowHomeHTML (categories) {
-	  $ajaxUtils.sendGetRequest(
-    homeHtmlUrl,
-    function (homeHtml) {document.querySelector("#main-content").innerHTML=homeHTML}
-		  },
-  true); 
+    $ajaxUtils.sendGetRequest(homeHtmlUrl,
+    function (homeHtml) {document.querySelector("#main-content").innerHTML=homeHTML;}
+	var chosenCategoryShortName = ....	  },
+  false); 
 });
 // *** finish **
 
