@@ -8,7 +8,6 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
     }
   });
 });
-//Hello
 (function (global) {
 
 var dc = {};
